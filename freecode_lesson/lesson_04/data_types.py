@@ -91,6 +91,11 @@ print(math.sqrt(64))
 print(math.ceil(gpa))
 print(math.floor(gpa))
 
+###Casting of string
+zipcode = "10001"
+zip_num = int(zipcode)
+print(type(zip_num))
+
 
 # # String Methods
 # name = "John Doe"
