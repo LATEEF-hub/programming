@@ -1,5 +1,15 @@
+
 import sys
 import random
+from enum import Enum
+
+
+class RPS(Enum):
+    # We use Cap for var that will be const
+    ROCK = 1
+    PAPER = 2
+    SCISSORS = 3
+
 
 print("")
 line1 = '********************'  # header and footer
@@ -13,31 +23,31 @@ print(line2)
 print(line1)
 print('')
 
-playerchoice = input("Enter your choice:\n1.Rock,\n2.Paper, or\n3.Scissors\n\n")
+playerchoice = input(
+    "Enter your choice:\n1.Rock,\n2.Paper, or\n3.Scissors\n\n")
 
-player = int(playerchoice) # Casting user input to INT
+player = int(playerchoice)  # Casting user input to INT
 
 if player < 1 | player > 3:
     # Validating user Input
-    sys.exit("Invalid Entry! Please enter a number between 1-3.") #Here I change to SYS.exit to be able to exit the game
+    # Here I change to SYS.exit to be able to exit the game
+    sys.exit("Invalid Entry! Please enter a number between 1-3.")
 
 computerchoice = random.choice("123")
 computer = int(computerchoice)
 
 print("")
-print("You chose " + playerchoice + ".")
+print("You chose " + str(RPS(player)) + ".")
 print("Python chose " + computerchoice + ".")
 print("")
 # Comparing the choices of both players
 if player == 1 and computer == 3:
     print("Congratulations! You Win.")
 elif player == 2 and computer == 1:
-    print("Congratulations! You Win.") 
+    print("Congratulations! You Win.")
 elif player == 3 and computer == 2:
-    print("Congratulations! You Win.") 
+    print("Congratulations! You Win.")
 elif player == computer:
     print("It is a tie!")
 else:
-    print("Computer wins!")  
-    
-      
+    print("Computer wins!")
