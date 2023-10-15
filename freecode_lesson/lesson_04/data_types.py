@@ -30,3 +30,15 @@ print(first[1:-1])
 print(first[1:]) 
 print(first[:3])
 print("")
+
+#Some methods return Boolean data
+print(first.startswith("Q"))
+print(first.endswith("u"))
+
+#Boolean Data types
+myvalue = 'True'
+z = bool(False) #Using construction func
+print(type(z))
+print(myvalue)
+print(isinstance(myvalue, bool))
+
