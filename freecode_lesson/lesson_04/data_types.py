@@ -84,9 +84,12 @@ print(round(gpa, 1))
 # String Methods
 print('\n')
 
-# Math method
+#### Math method
 
 print(math.pi)
+print(math.sqrt(64))
+print(math.ceil(gpa))
+print(math.floor(gpa))
 
 
 # # String Methods
