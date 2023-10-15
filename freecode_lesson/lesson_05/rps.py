@@ -28,8 +28,7 @@ playerchoice = input(
 
 player = int(playerchoice)  # Casting user input to INT
 
-if player < 1 | player > 3:
-    # Validating user Input
+if player < 1 or player > 3: # Validating user Input
     # Here I change to SYS.exit to be able to exit the game
     sys.exit("Invalid Entry! Please enter a number between 1-3.")
 
