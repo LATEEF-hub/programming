@@ -37,7 +37,7 @@ computerchoice = random.choice("123")
 computer = int(computerchoice)
 
 print("")
-print("You chose " + str(RPS(player)).replace("RPS.", "") + ".")
+print("You chose " + str(RPS(player)).replace("RPS.", "") + ".") # I use replace method to remove RPS
 print("Python chose " + str(RPS(computer)).replace("RPS.", "") + ".")
 print("")
 # Comparing the choices of both players
