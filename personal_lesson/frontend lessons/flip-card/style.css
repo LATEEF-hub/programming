@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-image: linear-gradient(to left, #83a4d4, #b6fbff);
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+  gap: 1.5rem;
+  margin: 0.5rem;
+ 
+}
+
+.card {
+  /* display: block; */
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  
+
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.menu {
+  margin-top: 4rem;
+
+}
+
+img {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+@media screen {
+  
+}

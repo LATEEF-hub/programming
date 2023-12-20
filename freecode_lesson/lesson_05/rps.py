@@ -23,30 +23,37 @@ print(line2)
 print(line1)
 print('')
 
-playerchoice = input(
-    "Enter your choice:\n1.Rock,\n2.Paper, or\n3.Scissors\n\n")
 
-player = int(playerchoice)  # Casting user input to INT
+def start_game():
+    playerchoice = input(
+        "Enter your choice:\n\n1.Rock,\n2.Paper, or\n3.Scissors\n\n")
 
-if player < 1 or player > 3: # Validating user Input
-    # Here I change to SYS.exit to be able to exit the game
-    sys.exit("Invalid Entry! Please enter a number between 1-3.")
+    player = int(playerchoice)  # Casting user input to INT
 
-computerchoice = random.choice("123")
-computer = int(computerchoice)
+    if player < 1 or player > 3:  # Validating user Input
+        # Here I change to SYS.exit to be able to exit the game
+        sys.exit("Invalid Entry! Please enter a number between 1-3.")
+
+    computerchoice = random.choice("123")
+    computer = int(computerchoice)
+
 
 print("")
-print("You chose " + str(RPS(player)).replace("RPS.", "") + ".") # I use replace method to remove RPS
+# I use replace method to remove RPS
+print("You chose " + str(RPS(player)).replace("RPS.", "") + ".")
 print("Python chose " + str(RPS(computer)).replace("RPS.", "") + ".")
 print("")
 # Comparing the choices of both players
-if player == 1 and computer == 3:
-    print("Congratulations! You Win.")
+if playerchoice == 1 and computer == 3:
+    print("Congratulations! 🎉 You Win.")
 elif player == 2 and computer == 1:
-    print("Congratulations! You Win.")
+    print("Congratulations! 🎉 You Win.")
 elif player == 3 and computer == 2:
-    print("Congratulations! You Win.")
-elif player == computer:
-    print("It is a tie!")
+    print("Congratulations! 🎉 You Win.")
+elif player == computerchoice:
+    print("It is a tie! 😉")
 else:
-    print("Computer wins!")
+    print("Computer wins! 😂")
+
+
+start_game()
